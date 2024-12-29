@@ -1,14 +1,14 @@
 {
   "name": "fide",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.3",
+  "description": "fide application",
   "main": "dist/index.js",
   "scripts": {
     "dev": "node compress.js && set NODE_ENV=development&electron .",
     "start": "electron-forge start",
     "electron": "electron .",
     "pack": "node compress.js && electron-builder --dir",
-    "dist": "node compress.js && electron-builder",
+    "dist": "electron-builder",
     "uglify": "node compress.js"
   },
   "type": "module",
@@ -29,9 +29,9 @@
     "uglify-js": "^3.19.3"
   },
   "build": {
-    "appId": "com.example.tet",
-    "artifactName": "test-${version}.${ext}",
-    "productName": "test",
+    "appId": "com.fide.co.kr",
+    "artifactName": "fide-${version}.${ext}",
+    "productName": "fide",
     "files": [
       "!.nuxt/**",
       "!public/**",
