@@ -1,0 +1,1 @@
+let{contextBridge,ipcRenderer}=require("electron");contextBridge.exposeInMainWorld("ipcRenderer",{send:(e,n)=>ipcRenderer.send(e,n),invoke:async(e,n)=>ipcRenderer.invoke(e,n),on:(e,r)=>{var n=(e,n)=>r(n);return ipcRenderer.on(e,n),n},open:(e,r,n)=>{ipcRenderer.send(e,n),ipcRenderer.on(e,(e,n)=>r(n))},listen:(e,n,r)=>{ipcRenderer.send(e,n),ipcRenderer.on(e,(e,n)=>r(n))}});

@@ -1,0 +1,52 @@
+{
+  "name": "fide",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "node compress.js && set NODE_ENV=development&electron .",
+    "start": "electron-forge start",
+    "electron": "electron .",
+    "pack": "node compress.js && electron-builder --dir",
+    "dist": "node compress.js && electron-builder",
+    "uglify": "node compress.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "d3": "^7.9.0",
+    "electron-updater": "^6.3.9",
+    "jsonwebtoken": "^9.0.2",
+    "mathjs": "^13.2.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.0.2"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "uglify-js": "^3.19.3"
+  },
+  "build": {
+    "appId": "com.example.tet",
+    "artifactName": "test-${version}.${ext}",
+    "productName": "test",
+    "files": [
+      "!.nuxt/**",
+      "!public/**",
+      "!package/**",
+      "!app.vue",
+      "!components/**",
+      "!nuxt.config.js",
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "package"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
