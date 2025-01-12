@@ -1,6 +1,6 @@
 {
   "name": "fide",
-  "version": "0.1.3",
+  "version": "0.1.9",
   "description": "fide application",
   "main": "dist/index.js",
   "scripts": {
